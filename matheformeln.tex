@@ -6,7 +6,7 @@
 \usepackage[none]{hyphenat} % Silbentrennung deaktivieren 
 \usepackage{fancyhdr}%Kopf und Fußzeile: https://de.overleaf.com/learn/latex/Headers_and_footers
 \usepackage{graphicx}%Zum Bilder einfügen
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{wrapfig}
 \usepackage[document]{ragged2e}%für Blocksatz
 \usepackage[ddmmyyyy]{datetime}%zum bearbeiten vom Datungs Format
@@ -170,17 +170,17 @@ Dreipunkte = Gleichungssystem:
 Wenn bei einer Funktion $f(x)= ax^{2}+ax+x$ drei Punkte die Auf der Funktion liegen gegeben sind
 so kann man diese in ein Gleichungssystem setzen:
 
-Zum Beispiel Die Punkte:$A({\color{green}-2} | {\color{purple}- 18})$,$B({\color{blue}1}|{\color{red}-3})$,$C({\color{pink}4}|-24)$ gegeben sind dann:
+Zum Beispiel Die Punkte:$A({\color{green}-2} | {\color{purple}- 18})$,$B({\color{blue}1}|{\color{red}-3})$,$C({\color{pink}4}|{\color{cyan}-24})$ gegeben sind dann:
 
 A:\@ ${\color{purple}-18} = a \cdot ({\color{green}-2})^2 +b \cdot ({\color{green}-2}) + c $
 
 B:\@ ${\color{red}-3} = a \cdot ({\color{blue}1})^2 +b \cdot ({\color{blue}1}) + c $
 
-C:\@ $-24 = a \cdot ({\color{pink}4})^2 +b \cdot ({\color{pink}4}) + c$
+C:\@ ${\color{cyan}-24} = a \cdot ({\color{pink}4})^2 +b \cdot ({\color{pink}4}) + c$
 
 
 
-\subsection{Nullstellen(pq-formel) }
+\subsection{Nullstellen (pq-formel) }
 pq formel nutzen:\\
 $x^2 +\textbf{12}x +\textbf{2}$\\
 12 = p, 2 = q\\
@@ -188,12 +188,10 @@ $x_{1,2} = -\frac{p}{2} \pm \sqrt{(-\frac{p}{2})^2-q}$\\
 Qudratische Funktionen können \textbf{zwei eine oder keine} Nullstelle haben!
 
 \subsection{Funktionen und Greaden}
-\hfill \break
+
 \begin{tabular}{p{5cm} p{5cm} p{5cm}}
     \textbf{Sekante} & \textbf{Tangente} & \textbf{Passante}\\
-    Schneidet die Gerade die quadratische Funktion in zwei Punkten, so heißt sie \textbf{Sekante} &
-    Schneidet die Gerade die quadratische Funktion in nur einem Punkt, so wird sie \textbf{Tangente} genannt. &
-    Schneidet die Gerade die quadratische Funktion überhaupt nicht, so heißt sie \textbf{Passante}.\\
+    Schneidet die Gerade die quadratische Funktion in zwei Punkte
 \end{tabular}
 
 
@@ -207,16 +205,26 @@ Qudratische Funktionen können \textbf{zwei eine oder keine} Nullstelle haben!
 
 Für x wird mit -x eingesetz
 
-$f(x) = x^3 -x$
+Zum Beispiel
+\begin{equation}
+    f(x) = x^3 -x
+\end{equation}
+Man setzte für $x -x$ ein
+\begin{equation}
+    f(-x) = (-x)^{3} -(-x) 
+\end{equation}
+\begin{equation}
+    \Rightarrow -x^{3} + x = -f(x)
+\end{equation}
 
-$f(-x) = (-x)^3 -(-x) \Rightarrow -x^3 + x = -f(x) $
-
-Punktsymmetire(\textbf{alle} Vorzeichen geändert)
-\vspace{5mm}
-
-$g(x) = x^4 + x^2: $
-
-$g(-x) = (-x)^4 + (-x)^2 = x^4 + x^2 = g(x) $
+Punktsymmetire (\textbf{alle} Vorzeichen geändert)
+\begin{equation}
+    g(x) = x^4 + x^{4}
+\end{equation}
+Für $x$ wird $-x$ eingesetz
+\begin{equation}
+    \Rightarrow g(-x) = (-x)^{4} + (-x)^{2} = x^{4} + x^{2} = g(x) 
+\end{equation}
 
 Achsensymmetrie (\textbf{kein} Vorzeichen geändert)
 \vspace{5mm}
@@ -573,13 +581,6 @@ $\sqrt[3]{5}\approx 1,71 =a$
 \textbf{Halbwertszeit:} $t_{H}=\log_{a}(0.5)$
 
 \textbf{Verdopplungszeit:} $t_{V}=\log_{a}(2)$
-
-
-
-
-
-
-
 
 
 
