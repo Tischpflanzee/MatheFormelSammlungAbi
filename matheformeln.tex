@@ -15,6 +15,7 @@
 \usepackage{float} %for using H at the Figure for presie placments
 \usepackage{amsmath}
 \usepackage{gensymb}%for \textdegree or \degree
+\usepackage{titlesec}
 
 
 \newcommand{\authoren}{Niklas Hainz}
@@ -37,7 +38,14 @@
 \renewcommand{\contentsname}{\Inhaltsverzeichnisname}
 \renewcommand{\dateseparator}{.}
 
+%For subsubsub... sections
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 
+\makeatletter
+\newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\makeatother
 
 
 
@@ -45,602 +53,632 @@
 
 \begin{document}
 \begin{spacing}{\Zeilenabstand}
-\maketitle
-\begin{center}
-    \vspace{-5mm}
-    Fach: \Fach
-\end{center}
-\thispagestyle{empty}
-\newpage
+    \maketitle
+    \begin{center}
+        \vspace{-5mm}
+        Fach: \Fach
+    \end{center}
+    \thispagestyle{empty}
+    \newpage
 
-\pagestyle{fancy}
-\fancyhead[L]{\authoren}
-\fancyhead[C]{\Thema / Fach: \Fach}
-\fancyhead[R]{\today}
-\fancyfoot[R]{\thepage}
-\fancyfoot[C]{}
+    \pagestyle{fancy}
+    \fancyhead[L]{\authoren}
+    \fancyhead[C]{\Thema / Fach: \Fach}
+    \fancyhead[R]{\today}
+    \fancyfoot[R]{\thepage}
+    \fancyfoot[C]{}
 
-\pagenumbering{roman}
-\setcounter{page}{1}
-\tableofcontents
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+    \tableofcontents
 
 
-\newpage
+    \newpage
 
-\pagenumbering{arabic}
-\setcounter{page}{1}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
 
 
 
-\newpage
+    \newpage
 
 
 
-\section{Linare Funktionen}
-\subsection{Punktsteiguns-Form}
+    \section{Linare Funktionen}
+        \subsection{Punktsteiguns-Form}
+            \subsubsection{test}
+                \subsubsubsection{test}
+                    \subsubsubsubsection{test}
 
-$ f(x) = m(x-x_0) + y_0$
 
-X\textsubscript{0} und Y\textsubscript{0} ist ein belibeger Punkt auf der Linarenfunktion
 
-\subsection{Zwei-Punkte-Form}
+            $ f(x) = m(x-x_0) + y_0$
 
-$ m = \frac{\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1}$
+            X\textsubscript{0} und Y\textsubscript{0} ist ein belibeger Punkt auf der Linarenfunktion
 
-\subsection{Schnittpunkte zweier Linarenfunktion}
+    \subsection{Zwei-Punkte-Form}
 
-Gleichsetzen und Ausrechnen !
+    $ m = \frac{\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1}$
 
-\subsection{Steigunswinkel}
+    \subsection{Schnittpunkte zweier Linarenfunktion}
 
-$ tan(\alpha) = \frac{\Delta x}{\Delta y } = m $\\
-$\Rightarrow \alpha = tan^{-1}(m)$
+    Gleichsetzen und Ausrechnen !
 
-\subsection{Schnittwinkel}
+    \subsection{Steigunswinkel}
 
-$ \gamma = \vert tan^{-1}(m_1) - tan^{-1}(m_2)\vert $
-\newpage
+    $ tan(\alpha) = \frac{\Delta x}{\Delta y } = m $\\
+    $\Rightarrow \alpha = tan^{-1}(m)$
 
+    \subsection{Schnittwinkel}
 
-\section{Qudratische Funktionen}
+    $ \gamma = \vert tan^{-1}(m_1) - tan^{-1}(m_2)\vert $
+    \newpage
 
-\subsection{Qudratische Ergänzung}
 
-Eine Qudratische Ergänzung wird genutz um eine Qudratische Funktion 
-in die Scheitelpunkform umzustellen, wenn vor dem $x^{2}$ keine zahl steht
+    \section{Qudratische Funktionen}
 
-Gegeben sei: 
-\begin{equation}
-     g(x) = x^2 - \textbf{6}x + 11 
-\end{equation}
-\begin{equation}
-    g(x) =  x^2 + 6x + 9 - 9 + 11  \ \   \vert \ \ +9 -9\ da \  (\frac{\textbf{6}}{2})^2 = 9
-\end{equation}
-Mit den +9 kann jetzt ein Binom gebildet werden:
-\begin{equation}
-    \Rightarrow g(x) = (x+3)^2 -9 +11 
-\end{equation}
-Jetzt muss nur noch die -9 verrechtnet werden:
-\begin{equation}
-    \Rightarrow g(x) = (x+3)^2 + 2 
-\end{equation}
+    \subsection{Qudratische Ergänzung}
 
-\subsection{Scheitelpunkt und ein weiterer Punkt}
+    Eine Qudratische Ergänzung wird genutz um eine Qudratische Funktion 
+    in die Scheitelpunkform umzustellen, wenn vor dem $x^{2}$ keine zahl steht
 
-\subsubsection{Formel}
+    Gegeben sei: 
+    \begin{equation}
+         g(x) = x^2 - \textbf{6}x + 11 
+    \end{equation}
+    \begin{equation}
+        g(x) =  x^2 + 6x + 9 - 9 + 11  \ \   \vert \ \ +9 -9\ da \  (\frac{\textbf{6}}{2})^2 = 9
+    \end{equation}
+    Mit den +9 kann jetzt ein Binom gebildet werden:
+    \begin{equation}
+        \Rightarrow g(x) = (x+3)^2 -9 +11 
+    \end{equation}
+    Jetzt muss nur noch die -9 verrechtnet werden:
+    \begin{equation}
+        \Rightarrow g(x) = (x+3)^2 + 2 
+    \end{equation}
 
-Wenn der Scheitel Punkt ($x_{s}$ und $y_{s}$) gegeben ist 
-und ein weiterer Punkt auf dem Funktions Graphen dann kann volgende 
-Formel angewendet werden:
-\begin{equation}
-    f(x)=a \cdot (x-x_s)^2 +y_s    
-\end{equation}
+    \subsection{Scheitelpunkt und ein weiterer Punkt}
 
-\subsubsection{Beispiel}
+    \subsubsection{Formel}
 
-Gegeben sei der Scheitelpunkt({\color{blue}2}|{\color{red}3}) und den Punkt
-({\color{purple}4}|{\color{green}5})
+    Wenn der Scheitel Punkt ($x_{s}$ und $y_{s}$) gegeben ist 
+    und ein weiterer Punkt auf dem Funktions Graphen dann kann volgende 
+    Formel angewendet werden:
+    \begin{equation}
+        f(x)=a \cdot (x-x_s)^2 +y_s    
+    \end{equation}
 
-\begin{equation}
-    {\color{green}f(x)}=a \cdot ({\color{purple}x}-{\color{blue}x_s})^2 + {\color{red}y_s}    
-\end{equation}
+    \subsubsection{Beispiel}
 
-Nach dem Einsetzen sieht das dann so aus:
+    Gegeben sei der Scheitelpunkt({\color{blue}2}|{\color{red}3}) und den Punkt
+    ({\color{purple}4}|{\color{green}5})
 
-\begin{equation}
-    {\color{green}5}=a \cdot ({\color{purple}4}-{\color{blue}2})^2 + {\color{red}3}    
-\end{equation}
-Zusammen Fassen
-\begin{equation}
-    5=4a+3
-\end{equation}
-Nach a auflösen:
-\begin{equation}
-    a = \frac{1}{2}
-\end{equation}
-Damit ergibt sich dann die Funktionsgleichung:
-\begin{equation}
-    f(x)=\frac{1}{2}(x-2)^2+3
-\end{equation}
+    \begin{equation}
+        {\color{green}f(x)}=a \cdot ({\color{purple}x}-{\color{blue}x_s})^2 + {\color{red}y_s}    
+    \end{equation}
 
+    Nach dem Einsetzen sieht das dann so aus:
 
-\subsection{Dreipunkte}
-Dreipunkte = Gleichungssystem:
+    \begin{equation}
+        {\color{green}5}=a \cdot ({\color{purple}4}-{\color{blue}2})^2 + {\color{red}3}    
+    \end{equation}
+    Zusammen Fassen
+    \begin{equation}
+        5=4a+3
+    \end{equation}
+    Nach a auflösen:
+    \begin{equation}
+        a = \frac{1}{2}
+    \end{equation}
+    Damit ergibt sich dann die Funktionsgleichung:
+    \begin{equation}
+        f(x)=\frac{1}{2}(x-2)^2+3
+    \end{equation}
 
-Wenn bei einer Funktion $f(x)= ax^{2}+ax+x$ drei Punkte die Auf der Funktion liegen gegeben sind
-so kann man diese in ein Gleichungssystem setzen:
 
-Zum Beispiel Die Punkte:$A({\color{green}-2} | {\color{purple}- 18})$,$B({\color{blue}1}|{\color{red}-3})$,$C({\color{pink}4}|{\color{cyan}-24})$ gegeben sind dann:
+    \subsection{Dreipunkte}
+    Dreipunkte = Gleichungssystem:
 
-A:\@ ${\color{purple}-18} = a \cdot ({\color{green}-2})^2 +b \cdot ({\color{green}-2}) + c $
+    Wenn bei einer Funktion $f(x)= ax^{2}+ax+x$ drei Punkte die Auf der Funktion liegen gegeben sind
+    so kann man diese in ein Gleichungssystem setzen:
 
-B:\@ ${\color{red}-3} = a \cdot ({\color{blue}1})^2 +b \cdot ({\color{blue}1}) + c $
+    Zum Beispiel Die Punkte:$A({\color{green}-2} | {\color{purple}- 18})$,$B({\color{blue}1}|{\color{red}-3})$,$C({\color{pink}4}|{\color{cyan}-24})$ gegeben sind dann:
 
-C:\@ ${\color{cyan}-24} = a \cdot ({\color{pink}4})^2 +b \cdot ({\color{pink}4}) + c$
+    A:\@ ${\color{purple}-18} = a \cdot ({\color{green}-2})^2 +b \cdot ({\color{green}-2}) + c $
 
+    B:\@ ${\color{red}-3} = a \cdot ({\color{blue}1})^2 +b \cdot ({\color{blue}1}) + c $
 
+    C:\@ ${\color{cyan}-24} = a \cdot ({\color{pink}4})^2 +b \cdot ({\color{pink}4}) + c$
 
-\subsection{Nullstellen (pq-formel) }
-pq formel nutzen:\\
-$x^2 +\textbf{12}x +\textbf{2}$\\
-12 = p, 2 = q\\
-$x_{1,2} = -\frac{p}{2} \pm \sqrt{(-\frac{p}{2})^2-q}$\\
-Qudratische Funktionen können \textbf{zwei eine oder keine} Nullstelle haben!
 
-\subsection{Funktionen und Greaden}
 
-\begin{tabular}{p{5cm} p{5cm} p{5cm}}
-    \textbf{Sekante} & \textbf{Tangente} & \textbf{Passante}\\
-    Schneidet die Gerade die quadratische Funktion in zwei Punkte
-\end{tabular}
+    \subsection{Nullstellen (pq-formel) }
+    pq formel nutzen:\\
+    $x^2 +\textbf{12}x +\textbf{2}$\\
+    12 = p, 2 = q\\
+    $x_{1,2} = -\frac{p}{2} \pm \sqrt{(-\frac{p}{2})^2-q}$\\
+    Qudratische Funktionen können \textbf{zwei eine oder keine} Nullstelle haben!
 
+    \subsection{Funktionen und Greaden}
 
+    \begin{tabular}{p{5cm} p{5cm} p{5cm}}
+        \textbf{Sekante} & \textbf{Tangente} & \textbf{Passante}\\
+        Schneidet die Gerade die quadratische Funktion in zwei Punkte
+    \end{tabular}
 
-\newpage
 
 
+    \newpage
 
-\section{Ganzrationale Funktionen}
-\subsection{Nachweis von Symmetrien}
 
-Für x wird mit -x eingesetz
 
-Zum Beispiel
-\begin{equation}
-    f(x) = x^3 -x
-\end{equation}
-Man setzte für $x -x$ ein
-\begin{equation}
-    f(-x) = (-x)^{3} -(-x) 
-\end{equation}
-\begin{equation}
-    \Rightarrow -x^{3} + x = -f(x)
-\end{equation}
+    \section{Ganzrationale Funktionen}
+    \subsection{Nachweis von Symmetrien}
 
-Punktsymmetire (\textbf{alle} Vorzeichen geändert)
-\begin{equation}
-    g(x) = x^4 + x^{4}
-\end{equation}
-Für $x$ wird $-x$ eingesetz
-\begin{equation}
-    \Rightarrow g(-x) = (-x)^{4} + (-x)^{2} = x^{4} + x^{2} = g(x) 
-\end{equation}
+    Für x wird mit -x eingesetz
 
-Achsensymmetrie (\textbf{kein} Vorzeichen geändert)
-\vspace{5mm}
+    Zum Beispiel
+    \begin{equation}
+        f(x) = x^3 -x
+    \end{equation}
+    Man setzte für $x -x$ ein
+    \begin{equation}
+        f(-x) = (-x)^{3} -(-x) 
+    \end{equation}
+    \begin{equation}
+        \Rightarrow -x^{3} + x = -f(x)
+    \end{equation}
 
-$ h(x) =\frac{1}{2} x^3 + \frac{3}{2}x^2$
+    Punktsymmetire (\textbf{alle} Vorzeichen geändert)
+    \begin{equation}
+        g(x) = x^4 + x^{4}
+    \end{equation}
+    Für $x$ wird $-x$ eingesetz
+    \begin{equation}
+        \Rightarrow g(-x) = (-x)^{4} + (-x)^{2} = x^{4} + x^{2} = g(x) 
+    \end{equation}
 
-$ h(-x) = \frac{1}{2} (-x)^3 + \frac{3}{2} (-x)^2 = -\frac{1}{2}x^3 + \frac{3}{2}x^2$
+    Achsensymmetrie (\textbf{kein} Vorzeichen geändert)
+    \vspace{5mm}
 
-\textbf{KEINE Symmetrie}
+    $ h(x) =\frac{1}{2} x^3 + \frac{3}{2}x^2$
 
-\subsection{Nullstellen von Kubischen Funktionen und Biquadratischen Funktionen}
-\subsubsection{Satz vom Nullprodukt}
-$ \frac{1}{4}x^3 -\frac{1}{2}x^2-2x=0$ $\vert$ x ausklammern
+    $ h(-x) = \frac{1}{2} (-x)^3 + \frac{3}{2} (-x)^2 = -\frac{1}{2}x^3 + \frac{3}{2}x^2$
 
-$x \cdot (\frac{1}{4}x^2-\frac{1}{2}x^2-2x) $ $\vert$ Satz v. Nullprodukt
+    \textbf{KEINE Symmetrie}
 
-$x_1 = 0$ und $\frac{1}{4}x^2-\frac{1}{2}x-2=0$ $\vert \cdot 4$
+    \subsection{Nullstellen von Kubischen Funktionen und Biquadratischen Funktionen}
+    \subsubsection{Satz vom Nullprodukt}
+    $ \frac{1}{4}x^3 -\frac{1}{2}x^2-2x=0$ $\vert$ x ausklammern
 
-$\Rightarrow x^2 - 2x - 8 = 0 $ $\vert$ pq-Formel
+    $x \cdot (\frac{1}{4}x^2-\frac{1}{2}x^2-2x) $ $\vert$ Satz v. Nullprodukt
 
-$\Rightarrow x_{2,3} = \pm \sqrt{9}$
+    $x_1 = 0$ und $\frac{1}{4}x^2-\frac{1}{2}x-2=0$ $\vert \cdot 4$
 
-\subsubsection{Substitution}   
-$f(x)=0$\\
-$x^4-5x^2+4 = 0$ $\vert x^2 = z$(Substit.)\\
-$z^2-5z+4=0$ $\vert$ pq-Formel\\
-$z_{1,2} = 2,5 \pm \sqrt{6,25-4}$\\
-$z_{1,2} = 2,5 \pm 1,5$\\
-$z_1 = 1$ und $z_2 = 4$ $\vert$ Resubst. $u=x^2$\\
-$x^2_{1,2} = 1$ und $x^2_{3,4}$ $\vert \sqrt{\ \ }$
-$x_1 = 1,x_2=-1,x_3=2,x_4=-2$
+    $\Rightarrow x^2 - 2x - 8 = 0 $ $\vert$ pq-Formel
 
+    $\Rightarrow x_{2,3} = \pm \sqrt{9}$
 
-\subsubsection{Lösung mit TR}
-"Menü $\Rightarrow$ A $\Rightarrow$ 2:Plynom-Gleich. $\Rightarrow$ Grad der zu lösenden Gleichung eingeben
+    \subsubsection{Substitution}   
+    $f(x)=0$\\
+    $x^4-5x^2+4 = 0$ $\vert x^2 = z$(Substit.)\\
+    $z^2-5z+4=0$ $\vert$ pq-Formel\\
+    $z_{1,2} = 2,5 \pm \sqrt{6,25-4}$\\
+    $z_{1,2} = 2,5 \pm 1,5$\\
+    $z_1 = 1$ und $z_2 = 4$ $\vert$ Resubst. $u=x^2$\\
+    $x^2_{1,2} = 1$ und $x^2_{3,4}$ $\vert \sqrt{\ \ }$
+    $x_1 = 1,x_2=-1,x_3=2,x_4=-2$
 
-\subsection{Nullstellen form}
-$f(x)= (x-1) \cdot (x^2-4)$\\
-Nullstellen sind in dem Fall fast direkt ablesbar\\
-Von $(x-1) = x_1=1$ und: \\
-$(x^2-4) $\\
-$\Rightarrow x^2 - 4 = 0$ $\vert -4$ $ \sqrt{\ \ }$\\
-$\Rightarrow x_2=2,x_3=-2$
-\newpage
 
+    \subsubsection{Lösung mit TR}
+    "Menü $\Rightarrow$ A $\Rightarrow$ 2:Plynom-Gleich. $\Rightarrow$ Grad der zu lösenden Gleichung eingeben
 
+    \subsection{Nullstellen form}
+    $f(x)= (x-1) \cdot (x^2-4)$\\
+    Nullstellen sind in dem Fall fast direkt ablesbar\\
+    Von $(x-1) = x_1=1$ und: \\
+    $(x^2-4) $\\
+    $\Rightarrow x^2 - 4 = 0$ $\vert -4$ $ \sqrt{\ \ }$\\
+    $\Rightarrow x_2=2,x_3=-2$
+    \newpage
 
 
 
-%\section{Limes}
-%
-%$\lim \limits_{x \to \infty}$
-%
-%
-%\newpage
 
 
+    %\section{Limes}
+    %
+    %$\lim \limits_{x \to \infty}$
+    %
+    %
+    %\newpage
 
 
 
 
-\section{Ableitungen von Funktionen}
-\subsection{Wie Leitet man ab}
-$f(x)= x\mathbf{^4}+ x\mathbf{^2} +5x +10$ $\Rightarrow f'(x)= \mathbf{4}\cdot x^{4-1} + \mathbf{2} \cdot x^{2-1} + \mathbf{1}\cdot 5 + 0 \cdot 10 $ \\
-$f'(x)= 4x^3+ 2x +5 $\\
-$f''(x)= 3 \cdot 4 \cdot x^{3-1} + 2x^{1-1} $ = $f''(x)=12x^2 +2 $
 
 
+        \section{Ableitungen von Funktionen}
+            \subsection{Wie Leitet man ab}
+                \begin{equation}
+                    f(x)= ax^{{\color{green}3}}+ax^{{\color{red}2}}+{\color{purple}x}+4 \Rightarrow 3ax^{\color{green}3-1}+2ax^{({\color{red}2-1})}+{\color{purple}x^{0}} \Rightarrow 3ax^{\color{green}2}+2ax^{({\color{red}1})}+{\color{purple}1}
+                \end{equation}
 
-\subsection{Steigung bestimmen mit der Ableitung}
-Die 1.Ableitung bezeichnet man auch der Steigunsfunktion !\\
-$f(x) = x^2 + 2x,x_0 = 3$\\
-1.Ableitung Bestimmen\\
-$f'(x) = 2x + 2 $\\
-x\textsubscript{0} in die 1. Ableitung einsetzen um die Steigung bei der X Position 
-herauszufinden:\\
-$f'(3)= 2 \cdot 3+ 2 = 8 $\\
-Die Steigung an der Stelle x\textsubscript{0} = 3 von der Funktion $f(x) = x^2 + 2x,x_0 = 3$ ist 8.
+                $f(x)= x\mathbf{^4}+ x\mathbf{^2} +5x +10$ $\Rightarrow f'(x)= \mathbf{4}\cdot x^{4-1} + \mathbf{2} \cdot x^{2-1} + \mathbf{1}\cdot 5 + 0 \cdot 10 $ \\
+                $f'(x)= 4x^3+ 2x +5 $\\
+                $f''(x)= 3 \cdot 4 \cdot x^{3-1} + 2x^{1-1} $ = $f''(x)=12x^2 +2 $
 
-\subsection{Besondere Potenzen bsp. ${\sqrt{x}} $}
-Die Meisten Potenzen kann man umschreiben bzw. Potenzgesetze anwenden:\\
-$g(x) = \sqrt{x} = x^{\frac{1}{2}} = $ Die Ableitung wäre dann:\\
-$g'(x) = \frac{1}{2} \cdot x^{\frac{1}{2}-1} = \frac{1}{2}x^{-\frac{1}{2}}$ %oder: $\frac{1}{2} \cdot \frac{1}{\sqrt{x}} = \frac{1}{2\sqrt{x}} $
 
-\subsection{Bestimmen des X-Wertes bei einer Bestimmten Steigung}
-Um herauszufinden wo die Steigun null ist stellt man die Funktionsgleichung gegen null:\\
-Bsp: 
-$ f'(x) = 2x + 2$\\
-$ f'(x) = 0 $\\
-$\Rightarrow0=2x+2  \vert -2 $\\
-$\Rightarrow -2= 2x \vert :2 $ \\
-$\Rightarrow -1 = x $\\
-Die Funktion hat an der Stelle x\textsubscript{0} = -1 die Steigung 0
+            \subsection{Steigung bestimmen mit der Ableitung}
+                Die 1.Ableitung bezeichnet man auch der Steigunsfunktion !\\
+                $f(x) = x^2 + 2x,x_0 = 3$\\
+                1.Ableitung Bestimmen\\
+                $f'(x) = 2x + 2 $\\
+                x\textsubscript{0} in die 1. Ableitung einsetzen um die Steigung bei der X Position 
+                herauszufinden:\\
+                $f'(3)= 2 \cdot 3+ 2 = 8 $\\
+                Die Steigung an der Stelle x\textsubscript{0} = 3 von der Funktion $f(x) = x^2 + 2x,x_0 = 3$ ist 8.
 
+            \subsection{Umschreiben Potenzen bsp. ${\sqrt{x}} $}
+                Die Meisten Potenzen kann man umschreiben bzw. Potenzgesetze anwenden:\\
+                $g(x) = \sqrt{x} = x^{\frac{1}{2}} = $ Die Ableitung wäre dann:\\
+                $g'(x) = \frac{1}{2} \cdot x^{\frac{1}{2}-1} = \frac{1}{2}x^{-\frac{1}{2}}$ %oder: $\frac{1}{2} \cdot \frac{1}{\sqrt{x}} = \frac{1}{2\sqrt{x}} $
 
+            \subsection{Bestimmen des X-Wertes bei einer Bestimmten Steigung}
+                Um herauszufinden wo die Steigun null ist stellt man die Funktionsgleichung gegen null:\\
+                Bsp: 
+                $ f'(x) = 2x + 2$\\
+                $ f'(x) = 0 $\\
+                $\Rightarrow0=2x+2  \vert -2 $\\
+                $\Rightarrow -2= 2x \vert :2 $ \\
+                $\Rightarrow -1 = x $\\
+                Die Funktion hat an der Stelle x\textsubscript{0} = -1 die Steigung 0
 
-\subsection{Rekonstrokution(von Ableitung zur Grundfunktion)}
 
-\begin{wrapfigure}[11]{r}{6cm}
-\fbox{\includegraphics[width=5.5cm]{Bilder/image_Funktionen.png}}
-\end{wrapfigure}
 
-Vorgehen beim graphischen Ableiten:
-\begin{enumerate}
-    \item Stellen mit Steigung 0 suchen, als Nullstellen eintragen
-    \item Monoto niebereiche markieren, Funktion in dem Bereich zeichnen
-\end{enumerate}
-Bei der Rekonstruktion geht man quasi umgekehrt vor
-\begin{enumerate}
-    \item Nullstellen suchen. Ist die Funktion vor im positiven, dann im negativen Bereiche, dann Hochpunkt eintragen. Andernfalls Tiefpunkt
-    \item Extrema suchen, als Wendepunkte eintragen.
-    \item Funktion qualitativ zeichnen.
-\end{enumerate}
+    \subsection{Rekonstrokution(von Ableitung zur Grundfunktion)}
 
-\newpage
+    \begin{wrapfigure}[11]{r}{6cm}
+    \fbox{\includegraphics[width=5.5cm]{Bilder/image_Funktionen.png}}
+    \end{wrapfigure}
 
-\section{Nutzen von der Zweiten Ableitung}
+    Vorgehen beim graphischen Ableiten:
+    \begin{enumerate}
+        \item Stellen mit Steigung 0 suchen, als Nullstellen eintragen
+        \item Monoto niebereiche markieren, Funktion in dem Bereich zeichnen
+    \end{enumerate}
+    Bei der Rekonstruktion geht man quasi umgekehrt vor
+    \begin{enumerate}
+        \item Nullstellen suchen. Ist die Funktion vor im positiven, dann im negativen Bereiche, dann Hochpunkt eintragen. Andernfalls Tiefpunkt
+        \item Extrema suchen, als Wendepunkte eintragen.
+        \item Funktion qualitativ zeichnen.
+    \end{enumerate}
 
-\subsection{Hoch und Tiefpunkte einer Funktion}
+    \newpage
 
-Um Herrauszufinden ob Extrema hoch oder Tiefpunkte sind müssen diese in die Zweite Ableitung einfügt werden:
+    \subsection{Nutzen von der Zweiten Ableitung}
 
-Wenn: $f''(x)=6x$  $\Rightarrow$ Extram: $1$ und $-1$
-\vspace{4mm}
+    \subsubsection{Hoch und Tiefpunkte einer Funktion}
 
-\textbf{Auf vorzeichen Achten!}
+    Um Herrauszufinden ob Extrema hoch oder Tiefpunkte sind müssen diese in die Zweite Ableitung einfügt werden:
 
-\vspace{4mm}
+    Wenn: $f''(x)=6x$  $\Rightarrow$ Extram: $1$ und $-1$
+    \vspace{4mm}
 
+    \textbf{Auf vorzeichen Achten!}
 
-Dann: $f''(x)=6 \cdot 1 \ \Rightarrow 6 > 0 \Rightarrow $ Tiefpunkt
+    \vspace{4mm}
 
-$\Rightarrow$ $f''(x)=6 \cdot (-1) \ \Rightarrow -6 < 0 \Rightarrow$ Hochpunkt
 
-\subsection{Wendepunkte berrechnen}
+    Dann: $f''(x)=6 \cdot 1 \ \Rightarrow 6 > 0 \Rightarrow $ Tiefpunkt
 
-Um die Wendepunkte von einer Funktion zu berrechnen:
+    $\Rightarrow$ $f''(x)=6 \cdot (-1) \ \Rightarrow -6 < 0 \Rightarrow$ Hochpunkt
 
-\begin{enumerate}
-    \item Ableitungen Bilden:
-    
-    $g(x)=-\frac{1}{12}x^4+x^2$
-    
-    $g'(x)=-\frac{1}{3}x^3+2x$
+    \subsubsection{Wendepunkte berrechnen}
 
-    $g''(x)=-x^2 + 2$
+    Um die Wendepunkte von einer Funktion zu berrechnen:
 
-    $g'''(x)=-2x$
+    \begin{enumerate}
+        \item Ableitungen Bilden:
 
-    \item $g''(x)=0$ setzen
-    
-    $g''(x)=-x^2+2 = 0$
+        $g(x)=-\frac{1}{12}x^4+x^2$
 
-    $\Rightarrow \pm\sqrt{2}$
+        $g'(x)=-\frac{1}{3}x^3+2x$
 
-    \item In die Dritte ableitung setzen:
-    
-    $g'''(\sqrt{2})=-2 \cdot \sqrt{2}$ $\neq 0$ $\Rightarrow$ WP bei $x = \sqrt{2}$
+        $g''(x)=-x^2 + 2$
 
-    $g'''(-\sqrt{2})=-2 \cdot (-\sqrt{2})$ $\neq 0$ $\Rightarrow$ WP bei $x = -\sqrt{2}$
+        $g'''(x)=-2x$
 
-    \item Vollen punkt bestimmen indem man in die Grundform einsetz:
-    
-    $g(-\sqrt{2})=-\frac{1}{12}(-\sqrt{2})^4+(-\sqrt{2})^2=$  $\frac{5}{3} \ \Rightarrow \ WP(-\sqrt{2} \vert \frac{5}{3}) $
+        \item $g''(x)=0$ setzen
 
-    $g(\sqrt{2})=-\frac{1}{12}(\sqrt{2})^4+(\sqrt{2})^2=$ $\frac{5}{3} \ \Rightarrow \ WP(\sqrt{2} \vert \frac{5}{3}) $
+        $g''(x)=-x^2+2 = 0$
 
+        $\Rightarrow \pm\sqrt{2}$
 
+        \item In die Dritte ableitung setzen:
 
-\end{enumerate}
+        $g'''(\sqrt{2})=-2 \cdot \sqrt{2}$ $\neq 0$ $\Rightarrow$ WP bei $x = \sqrt{2}$
 
-\section{Definitionsmenge}
+        $g'''(-\sqrt{2})=-2 \cdot (-\sqrt{2})$ $\neq 0$ $\Rightarrow$ WP bei $x = -\sqrt{2}$
 
-Die Definitionsmenge ist die Zahl die für X einsetzebar ist.\\
-Z.B bei der Funktionen $f(x)= \frac{1}{x}$ kann man keine Null einsetzen.
+        \item Vollen punkt bestimmen indem man in die Grundform einsetz:
 
-\subsection{Ganzrationale Formeln}
+        $g(-\sqrt{2})=-\frac{1}{12}(-\sqrt{2})^4+(-\sqrt{2})^2=$  $\frac{5}{3} \ \Rightarrow \ WP(-\sqrt{2} \vert \frac{5}{3}) $
 
-\begin{itemize}
-    \item[$\Rightarrow$] $2x-3$
-    \item[$\Rightarrow$] $5x^2-x+2$
-    \item[$\Rightarrow$] $x^4-4x^3$
-\end{itemize}
+        $g(\sqrt{2})=-\frac{1}{12}(\sqrt{2})^4+(\sqrt{2})^2=$ $\frac{5}{3} \ \Rightarrow \ WP(\sqrt{2} \vert \frac{5}{3}) $
 
-Bei Ganzrationale kann man alle Rellen zahlen für das X einfügen also:
-$\mathbb{D} = \mathbb{R}$ 
-Das $\mathbb{D}$ steht für die Definitionsmenge und $\mathbb{R}$ steht für die Rellenzahlen.
 
 
-\subsection{Gebrochene rationale Funktionen}
+    \end{enumerate}
 
-Gebrochene rationale Funktionen also: $f(x)=\frac{1}{x}$
+    \newpage
 
-\strich
+    \section{Definitionsmenge}
 
-Gebrochne rationale Funktionen:
+    Die Definitionsmenge ist die Zahl die für X einsetzebar ist.\\
+    Z.B bei der Funktionen $f(x)= \frac{1}{x}$ kann man keine Null einsetzen.
 
-Beim beispiel: $f(x)=\frac{x^2}{x^2-4}$ muss man die Nenner gleich 0 setzen!
+    \subsection{Ganzrationale Formeln}
 
-$x^2 -4 =0$ $\vert \ +4$
+    \begin{itemize}
+        \item[$\Rightarrow$] $2x-3$
+        \item[$\Rightarrow$] $5x^2-x+2$
+        \item[$\Rightarrow$] $x^4-4x^3$
+    \end{itemize}
 
-$x^\mathbf{2} = 4$ $\vert \ \sqrt[\mathbf{2}]{\ \ }$
+    Bei Ganzrationale kann man alle Rellen zahlen für das X einfügen also:
+    $\mathbb{D} = \mathbb{R}$ 
+    Das $\mathbb{D}$ steht für die Definitionsmenge und $\mathbb{R}$ steht für die Rellenzahlen.
 
-Nullstellen:
 
-$x_1 = -2, \  x_2 = 2$
+    \subsection{Gebrochene rationale Funktionen}
 
-also wäre die Definitionsmenge dann:
+    Gebrochene rationale Funktionen also: $f(x)=\frac{1}{x}$
 
-$\mathbb{D} = \mathbb{R} \backslash \{ Nullstellen \ des \ Nenners\}$
+    \strich
 
+    Gebrochne rationale Funktionen:
 
-das $\backslash$ steht für nicht einsetzebar.\\
-Und wir nuztzen die Nullstellen, da wenn wir die Nullstellen in die Funktionen im Nenner einsetzen dann kommt da null raus. Und durch null ist nicht teilbar. Also sieht das dann so aus:
+    Beim beispiel: $f(x)=\frac{x^2}{x^2-4}$ muss man die Nenner gleich 0 setzen!
 
+    $x^2 -4 =0$ $\vert \ +4$
 
-$\mathbb{D} = \mathbb{R} \backslash \{-2,2\}$
+    $x^\mathbf{2} = 4$ $\vert \ \sqrt[\mathbf{2}]{\ \ }$
 
-\subsection{Wurzelfunktionen}
+    Nullstellen:
 
-$f(x)=\sqrt{x-3}$
+    $x_1 = -2, \  x_2 = 2$
 
-\strich
+    also wäre die Definitionsmenge dann:
 
-Innere Funktion $\geq 0$ setzen:
+    $\mathbb{D} = \mathbb{R} \backslash \{ Nullstellen \ des \ Nenners\}$
 
-$x-3 \geq 0$ $\vert \ + 3$
 
-$x\geq3$
+    das $\backslash$ steht für nicht einsetzebar.\\
+    Und wir nuztzen die Nullstellen, da wenn wir die Nullstellen in die Funktionen im Nenner einsetzen dann kommt da null raus. Und durch null ist nicht teilbar. Also sieht das dann so aus:
 
-\strich
 
-$\mathbb{D} = \{ x \ \epsilon \ \mathbb{R} \ \vert \ x \geq3\}$
+    $\mathbb{D} = \mathbb{R} \backslash \{-2,2\}$
 
-\subsection{E-Funktionen}
-Bsp:
-$f(x)=e^x$
+    \subsection{Wurzelfunktionen}
 
-\strich
+    $f(x)=\sqrt{x-3}$
 
-$\mathbb{D} = \mathbb{R}$ 
+    \strich
 
+    Innere Funktion $\geq 0$ setzen:
 
+    $x-3 \geq 0$ $\vert \ + 3$
 
-\newpage
+    $x\geq3$
 
-\section{Rekonstruktion}
+    \strich
 
-\subsection{Schlüsselwörter}
+    $\mathbb{D} = \{ x \ \epsilon \ \mathbb{R} \ \vert \ x \geq3\}$
 
-Geht durch den Punkt $P(5\vert 3) \ \Rightarrow f(5)=3 $
+    \subsection{E-Funktionen}
+    Bsp:
+    $f(x)=e^x$
 
-Schneidet die y-Achse bei 7 $\Rightarrow \ P(0\vert 7) \ \Rightarrow f(0)=7 $
+    \strich
 
-Schneidet die x-Achse bei 2 $\Rightarrow \ P(2\vert 0) \ \Rightarrow f(2)=0 $
+    $\mathbb{D} = \mathbb{R}$ 
 
-\url{https://www.youtube.com/watch?v=xcs3JEWhTGM}
 
 
-\newpage
+    \newpage
 
-\section{Exponentialfunktionen}
+    \section{Rekonstruktion}
 
-%\subsection{Lineares und exponentielles Wachstum}
-%
-%Linares Wachstum ist Beispielsweise +2 also ein Wachstum das immer gleich bleibt
-%
-%\hfil \\
-%
-%Ein exponentielles Wachstum ist ein Wachstum das prozentual ansteigt wodurch sich der Wert 
-%vergrößert Beispielsweise: $\cdot$2 oder 2\% 
+    \subsection{Schlüsselwörter}
 
-\subsection{Funktionsgleichung}
+    Geht durch den Punkt $P(5\vert 3) \ \Rightarrow f(5)=3 $
 
-\subsubsection{Funktionstypen}
+    Schneidet die y-Achse bei 7 $\Rightarrow \ P(0\vert 7) \ \Rightarrow f(0)=7 $
 
-\hspace{\absatz}Wachstumsfunktion $= a > 1$ : $f(x)= 2^{x}$
+    Schneidet die x-Achse bei 2 $\Rightarrow \ P(2\vert 0) \ \Rightarrow f(2)=0 $
 
-\hspace{\absatz}Zerfallsfunktion $= 0 < a < 1$ $f(x)=0.2^{x}$
+    \url{https://www.youtube.com/watch?v=xcs3JEWhTGM}
 
-\vspace{\absatz}
 
-\subsubsection{Spiegelung}
+    \newpage
 
-Wird der Graph $f(x)=a^{x}$ gespiegelt dann kommt der Graph $g(x)=a^{-x}$ oder $g(x)=(\frac{1}{a})^{x}$
+    \section{Exponentialfunktionen}
 
-\subsubsection{Streckung}
+    %\subsection{Lineares und exponentielles Wachstum}
+    %
+    %Linares Wachstum ist Beispielsweise +2 also ein Wachstum das immer gleich bleibt
+    %
+    %\hfil \\
+    %
+    %Ein exponentielles Wachstum ist ein Wachstum das prozentual ansteigt wodurch sich der Wert 
+    %vergrößert Beispielsweise: $\cdot$2 oder 2\% 
 
-Um den Graphen zu strecken kommt die Variable \textbf{c} ins Spiel. Dieser Bestimmt die Streckung. Also:
-\begin{equation*}
-    f(x)=c\cdot a^{x}
-\end{equation*}
+    \subsection{Funktionsgleichung}
 
-Oder als Bsp. ein Graphen mit einer Streckung von 2 und einer Steigunsrate von 4: 
-\begin{equation*}
-    g(x)=2\cdot 4^{x}
-\end{equation*}
+    \subsubsection{Funktionstypen}
 
-\subsubsection{Verschiebung in y-Richtung}
+    \hspace{\absatz}Wachstumsfunktion $= a > 1$ : $f(x)= 2^{x}$
 
-Zur Verschiebung in y-Richtung wird die Variable \textbf{b} genutzt:
-\begin{equation*}
-    f(x)=a^{x}\cdot b
-\end{equation*}
-Um einen Graphen um 2 in die Y Richtung zu verschieben, wird 2 in b eingesetz
-\begin{equation*}
-    f(x)=a^{x}\cdot \mathbf{2}
-\end{equation*}
+    \hspace{\absatz}Zerfallsfunktion $= 0 < a < 1$ $f(x)=0.2^{x}$
 
-\subsubsection{Verschiebung in x-Richtung}
+    \vspace{\absatz}
 
-Zur Verschiebung in x-Richtung wird die Variable \textbf{d} genutzt:
-\begin{equation*}
-    f(x)=a^{x+d}
-\end{equation*}
-Um einen Graphen um 2 in die X Richtung zu verschieben, wird 2 in d eingesetz
-\begin{equation*}
-    f(x)=a^{x+\mathbf{2}}
-\end{equation*}
+    \subsubsection{Spiegelung}
 
-\subsubsection{Grundform}
+    Wird der Graph $f(x)=a^{x}$ gespiegelt dann kommt der Graph $g(x)=a^{-x}$ oder $g(x)=(\frac{1}{a})^{x}$
 
-Die Grundform heißt dann:
+    \subsubsection{Streckung}
 
-\begin{equation*}
-    f(x)=c\cdot a^{x+d}+b
-\end{equation*}
+    Um den Graphen zu strecken kommt die Variable \textbf{c} ins Spiel. Dieser Bestimmt die Streckung. Also:
+    \begin{equation*}
+        f(x)=c\cdot a^{x}
+    \end{equation*}
 
+    Oder als Bsp. ein Graphen mit einer Streckung von 2 und einer Steigunsrate von 4: 
+    \begin{equation*}
+        g(x)=2\cdot 4^{x}
+    \end{equation*}
 
-\newpage
-\subsection{Bestimmung einer Exponentialfunktion}
+    \subsubsection{Verschiebung in y-Richtung}
 
-\subsubsection{Wurzel}
+    Zur Verschiebung in y-Richtung wird die Variable \textbf{b} genutzt:
+    \begin{equation*}
+        f(x)=a^{x}\cdot b
+    \end{equation*}
+    Um einen Graphen um 2 in die Y Richtung zu verschieben, wird 2 in b eingesetz
+    \begin{equation*}
+        f(x)=a^{x}\cdot \mathbf{2}
+    \end{equation*}
 
-Ist die Gleichung $x^{4}=8$ löst man mit der 4. Wurzel ($\sqrt[4]{\hspace{2mm}}$). Zum Beispiel:
+    \subsubsection{Verschiebung in x-Richtung}
 
-\vspace{\absatz}
+    Zur Verschiebung in x-Richtung wird die Variable \textbf{d} genutzt:
+    \begin{equation*}
+        f(x)=a^{x+d}
+    \end{equation*}
+    Um einen Graphen um 2 in die X Richtung zu verschieben, wird 2 in d eingesetz
+    \begin{equation*}
+        f(x)=a^{x+\mathbf{2}}
+    \end{equation*}
 
-Gegeben: $P(3\vert 5)$ und Gleichung $f(x)=a^{x}$
+    \subsubsection{Grundform}
 
-Wenn der Punkt eingesetz wird kommt dann folgendes raus:
+    Die Grundform heißt dann:
 
-$f(x)=a^x$
+    \begin{equation*}
+        f(x)=c\cdot a^{x+d}+b
+    \end{equation*}
 
-$5=a^3 \ \vert \sqrt[3]{\hspace{2mm}}$
 
-$\sqrt[3]{5}\approx 1,71 =a$
+    \newpage
+    \subsection{Bestimmung einer Exponentialfunktion}
 
-\subsubsection{Logarithmus}
+    \subsubsection{Wurzel}
 
+    Ist die Gleichung $x^{4}=8$ löst man mit der 4. Wurzel ($\sqrt[4]{\hspace{2mm}}$). Zum Beispiel:
 
-\subsection{Halbwertszeit/Verdopplungszeit}
+    \vspace{\absatz}
 
-\textbf{Halbwertszeit:} $t_{H}=\log_{a}(0.5)$
+    Gegeben: $P(3\vert 5)$ und Gleichung $f(x)=a^{x}$
 
-\textbf{Verdopplungszeit:} $t_{V}=\log_{a}(2)$
+    Wenn der Punkt eingesetz wird kommt dann folgendes raus:
 
+    $f(x)=a^x$
 
+    $5=a^3 \ \vert \sqrt[3]{\hspace{2mm}}$
 
+    $\sqrt[3]{5}\approx 1,71 =a$
 
-\newpage
-\section{Trigonometrische Funktionen}
+    \subsubsection{Logarithmus}
 
-\subsection{Bogenmaß}
 
-Ein Winkel kann im Grad- oder im \textbf{Bogenmaß} angegeben werden
+    \subsection{Halbwertszeit/Verdopplungszeit}
 
+    \textbf{Halbwertszeit:} $t_{H}=\log_{a}(0.5)$
 
+    \textbf{Verdopplungszeit:} $t_{V}=\log_{a}(2)$
 
-Im Bogenmaß wird der Winkel $\varphi$  als Verhältnis von Länge des Kreisbogens b zum Radius r definiert.\\
-{\Large\begin{math}\varphi = \frac{b}{r}\end{math}}
 
-Die Einheit für die Größe des Winkels ist im Bogenmaß dimensionslos und wird mit Radiant (rad) bezeichnet.
-1 rad bezeichnet einen Winkel, bei dem der Bogen gleich lang wie der Radius des Kreises ist.
 
-Für den Einheitskreis mit $r=1$ gilt: \hspace{5mm} $\varphi=b$
 
-Die Größe des Winkel ist gleich der Länge des Bogens
+    \newpage
+    \section{Trigonometrische Funktionen}
 
-Das kann man sich so vorstellen:
+    \subsection{Bogenmaß}
 
-Hier im Bsp. das bei einem Radiant also ungefähr 57,3° der Radius und der Bogen gleich lang ist.
-    
-\includegraphics[scale=0.5]{Bilder/Bogenmaß_bsp_2.png}
-\includegraphics[scale=0.5]{Bilder/Bogenmaß_bsp_1.png}
+    Ein Winkel kann im Grad- oder im \textbf{Bogenmaß} angegeben werden
 
-\subsection{Umrechnung zwischen Grad- und Bogenmaß}
 
-Die Bogenlänge b eines Kreissektors entspricht bei einer ganzen Umdrehung dem Umfang des Kreises und beträgt:
-$b=2r\pi$
 
-Also gilt bei einer Vollen Umdrehung:
-\begin{equation*}
-    \varphi=\frac{b}{r}=\frac{2r\pi}{r}=2\pi
-\end{equation*}
+    Im Bogenmaß wird der Winkel $\varphi$  als Verhältnis von Länge des Kreisbogens b zum Radius r definiert.\\
+    {\Large\begin{math}\varphi = \frac{b}{r}\end{math}}
 
-Bei einem Winkel von 360° im Gradmaß entspricht ein Wert von $2\pi$ im Bogenmaß.
-\textbf{Umrechnung:}
-\begin{equation*}
-    \alpha(\degree)=\frac{360\degree}{2\pi}\cdot \alpha(\text{in }rad) \text{ bzw. } \alpha(rad)=\frac{2\pi}{360\degree}\cdot \alpha(\text{in }\degree)
-\end{equation*}
+    Die Einheit für die Größe des Winkels ist im Bogenmaß dimensionslos und wird mit Radiant (rad) bezeichnet.
+    1 rad bezeichnet einen Winkel, bei dem der Bogen gleich lang wie der Radius des Kreises ist.
 
+    Für den Einheitskreis mit $r=1$ gilt: \hspace{5mm} $\varphi=b$
 
+    Die Größe des Winkel ist gleich der Länge des Bogens
 
+    Das kann man sich so vorstellen:
 
+    Hier im Bsp. das bei einem Radiant also ungefähr 57,3° der Radius und der Bogen gleich lang ist.
 
+    \includegraphics[scale=0.5]{Bilder/Bogenmaß_bsp_2.png}
+    \includegraphics[scale=0.5]{Bilder/Bogenmaß_bsp_1.png}
 
+    \subsection{Umrechnung zwischen Grad- und Bogenmaß}
 
+    Die Bogenlänge b eines Kreissektors entspricht bei einer ganzen Umdrehung dem Umfang des Kreises und beträgt:
+    $b=2r\pi$
 
-\newpage
+    Also gilt bei einer Vollen Umdrehung:
+    \begin{equation*}
+        \varphi=\frac{b}{r}=\frac{2r\pi}{r}=2\pi
+    \end{equation*}
 
-\section{Fachwörter}
+    Bei einem Winkel von 360° im Gradmaß entspricht ein Wert von $2\pi$ im Bogenmaß.
+    \textbf{Umrechnung:}
+    \begin{equation*}
+        \alpha(\degree)=\frac{360\degree}{2\pi}\cdot \alpha(\text{in }rad) \text{ bzw. } \alpha(rad)=\frac{2\pi}{360\degree}\cdot \alpha(\text{in }\degree)
+    \end{equation*}
 
-Monotonieverhalten
+    \newpage
 
-\url{https://www.geogebra.org/classroom/e8sbasfy#material/a4s7wueq}
+    \section{E-Funktion}
 
-\end{spacing}
+        \subsection{Eigenschaften}
+
+            Die Standert E-Funktion hat die eigentschaft das bei (1)
+
+        \subsection{Aufbau}
+
+
+            \begin{equation}
+                f(x) = a * e^{kx} + c    
+            \end{equation}
+
+
+        \subsection{Ableitung einer E-Funktion}
+
+        
+
+
+
+
+
+
+
+
+    \newpage
+
+    \section{Fachwörter}
+
+    Monotonieverhalten
+
+    \url{https://www.geogebra.org/classroom/e8sbasfy#material/a4s7wueq}
+
+    \end{spacing}
 \end{document}
